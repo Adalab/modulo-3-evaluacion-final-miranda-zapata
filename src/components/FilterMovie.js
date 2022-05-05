@@ -13,6 +13,7 @@ function FilterMovie(props) {
         id='mname'
         placeholder='Search by movie name'
         onChange={handleChangeMovie}
+        value={props.filterMovie}
       />
     </fieldset>
   );

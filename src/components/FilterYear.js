@@ -21,6 +21,7 @@ function FilterYear(props) {
         name='myear'
         id='myear'
         onChange={handleChangeYear}
+        value={props.filterYear}
       >
         <option value='all'>All</option>
         {renderYears()}

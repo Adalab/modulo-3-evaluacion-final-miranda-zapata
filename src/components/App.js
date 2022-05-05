@@ -1,6 +1,5 @@
 import '../styles/App.scss';
 import React from 'react';
-import getMovieApi from '../services/movieApi';
 
 import { useState, useEffect } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
@@ -10,19 +9,32 @@ import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
 import MovieSceneDetail from './MovieSceneDetail';
 
-// import LocalStorage from '../services/localStorage';
+import getMovieApi from '../services/movieApi';
+import LocalStorage from '../services/localStorage';
 // import PropTypes from 'prop-types';
 
 function App() {
-  const [movieData, setMovieData] = useState([]);
-  const [filterMovie, setFilterMovie] = useState('');
-  const [filterYear, setFilterYear] = useState('all');
+  const [movieData, setMovieData] = useState(LocalStorage.get('movies', []));
+  const [filterMovie, setFilterMovie] = useState(
+    LocalStorage.get('filterMovie', '')
+  );
+  const [filterYear, setFilterYear] = useState(
+    LocalStorage.get('filterYear', 'all')
+  );
 
   useEffect(() => {
-    getMovieApi().then((cleanData) => {
-      setMovieData(cleanData);
-    });
+    if (movieData.length === 0) {
+      getMovieApi().then((cleanData) => {
+        setMovieData(cleanData);
+      });
+    }
   }, []);
+
+  useEffect(() => {
+    LocalStorage.set('movies', movieData);
+    LocalStorage.set('filterMovie', filterMovie);
+    LocalStorage.set('filterYear', filterYear);
+  }, [movieData, filterMovie, filterYear]);
 
   const handleFilterMovie = (value) => {
     setFilterMovie(value);
@@ -74,6 +86,8 @@ function App() {
                   handleFilterMovie={handleFilterMovie}
                   handleFilterYear={handleFilterYear}
                   years={getYears()}
+                  filterMovie={filterMovie}
+                  filterYear={filterYear}
                 />
                 <MovieSceneList MovieSceneList={movieFilters} />
               </>
