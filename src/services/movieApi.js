@@ -6,7 +6,7 @@ const callToApi = () => {
     .then((response) => response.json())
     .then((data) => {
       // Cuando responde la API podemos limpiar los datos aquí
-      const cleanData = data.map((movie, index) => {
+      const cleanData = data.map((movie) => {
         return {
           poster: movie.poster,
           name: movie.movie,
@@ -14,7 +14,7 @@ const callToApi = () => {
           year: movie.year,
           director: movie.director,
           audio: movie.audio,
-          id: index,
+          id: movie.movie,
         };
       });
 

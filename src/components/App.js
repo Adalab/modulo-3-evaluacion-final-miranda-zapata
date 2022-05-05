@@ -1,10 +1,15 @@
 import '../styles/App.scss';
-import { useState, useEffect } from 'react';
-// import { Link, Route, Routes } from 'react-router-dom';
-// import { matchPath, useLocation } from 'react-router';
+import React from 'react';
 import getMovieApi from '../services/movieApi';
+
+import { useState, useEffect } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+import { useLocation, matchPath } from 'react-router';
+
 import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
+import MovieSceneDetail from './MovieSceneDetail';
+
 // import LocalStorage from '../services/localStorage';
 // import PropTypes from 'prop-types';
 
@@ -50,15 +55,36 @@ function App() {
     // return soleYear;
   };
 
+  const { pathname } = useLocation();
+  const pathData = matchPath('/movie/:id', pathname);
+
+  const movieId = pathData !== null ? pathData.params.id : null;
+  const foundMovie = movieData.find((item) => item.id === movieId);
+
   return (
     <>
       <h1>Owen Wilson's 'wow'</h1>
-      <Filters
-        handleFilterMovie={handleFilterMovie}
-        handleFilterYear={handleFilterYear}
-        years={getYears()}
-      />
-      <MovieSceneList MovieSceneList={movieFilters} />
+      <div className=''>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <Filters
+                  handleFilterMovie={handleFilterMovie}
+                  handleFilterYear={handleFilterYear}
+                  years={getYears()}
+                />
+                <MovieSceneList MovieSceneList={movieFilters} />
+              </>
+            }
+          />
+          <Route
+            path='/movie/:id'
+            element={<MovieSceneDetail MovieSceneItem={foundMovie} />}
+          />
+        </Routes>
+      </div>
     </>
   );
 }
