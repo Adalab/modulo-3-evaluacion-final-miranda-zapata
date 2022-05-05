@@ -8,7 +8,7 @@ function FilterMovie(props) {
       <label htmlFor='mname'>Movie</label>
       <input
         type='search'
-        className=''
+        className='input__search'
         name='mname'
         id='mname'
         placeholder='Search by movie name'

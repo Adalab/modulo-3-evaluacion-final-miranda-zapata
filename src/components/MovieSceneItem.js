@@ -4,14 +4,14 @@ function MovieSceneItem(props) {
   return (
     <a href='#'>
       <img
-        className='movieCard__poster'
+        className='movie__poster'
         alt={props.MovieSceneItem.name}
         title={props.MovieSceneItem.name}
         src={props.MovieSceneItem.poster}
       />
-      <h3 className='movieCard__title'>{props.MovieSceneItem.name}</h3>
-      <p className='movieCard__line'>{props.MovieSceneItem.line}</p>
-      <p className='movieCard__description'>{props.MovieSceneItem.year}</p>
+      <h3 className='movie__title'>{props.MovieSceneItem.name}</h3>
+      <p className='movie__line'>{props.MovieSceneItem.line}</p>
+      <p className='movie__year'>{props.MovieSceneItem.year}</p>
     </a>
   );
 }

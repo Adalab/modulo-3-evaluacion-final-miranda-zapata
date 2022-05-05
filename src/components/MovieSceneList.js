@@ -3,7 +3,7 @@ import MovieSceneItem from './MovieSceneItem';
 function MovieSceneList(props) {
   const movieElements = props.MovieSceneList.map((movieScene) => {
     return (
-      <li className='movieCard' key={movieScene.id}>
+      <li className='movie' key={movieScene.id}>
         <MovieSceneItem MovieSceneItem={movieScene} />
       </li>
     );
@@ -11,7 +11,7 @@ function MovieSceneList(props) {
 
   return (
     <section>
-      <ul className='movieCards'>{movieElements}</ul>
+      <ul className='movies'>{movieElements}</ul>
     </section>
   );
 }
