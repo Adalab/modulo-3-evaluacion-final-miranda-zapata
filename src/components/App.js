@@ -56,6 +56,10 @@ function App() {
       }
     });
 
+  const preventSubmitName = (ev) => {
+    ev.preventDefault();
+  };
+
   const getYears = () => {
     const movieYears = movieData.map((movie) => movie.year);
     /* const soleYear = movieYears.filter((year, index) => {
@@ -88,6 +92,7 @@ function App() {
                   years={getYears()}
                   filterMovie={filterMovie}
                   filterYear={filterYear}
+                  preventSubmitName={preventSubmitName}
                 />
                 <MovieSceneList MovieSceneList={movieFilters} />
               </>

@@ -4,7 +4,7 @@ import FilterYear from './FilterYear';
 function Filters(props) {
   return (
     <section className=''>
-      <form>
+      <form onSubmit={props.preventSubmitName}>
         <FilterMovie
           handleFilterMovie={props.handleFilterMovie}
           filterMovie={props.filterMovie}
