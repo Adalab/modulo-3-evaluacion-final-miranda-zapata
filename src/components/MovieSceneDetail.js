@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function MovieSceneDetail(props) {
   return (
     <section className='movie__detail'>
@@ -12,14 +14,22 @@ function MovieSceneDetail(props) {
       <p className='movie__director'>
         Directed by {props.MovieSceneItem.director}
       </p>
-      <a
-        className='movie__clip'
-        href={props.MovieSceneItem.audio}
-        title='Listen to this wow!'
-        target='_blank'
-      >
-        Audio clip
-      </a>
+      <p>
+        <a
+          className='movie__clip'
+          href={props.MovieSceneItem.audio}
+          title='Listen to this wow!'
+          target='_blank'
+        >
+          Audio clip
+        </a>
+      </p>
+
+      <p>
+        <Link to='/' className='movie__returnBtn' title='Return to homepage'>
+          Go back
+        </Link>
+      </p>
     </section>
   );
 }
