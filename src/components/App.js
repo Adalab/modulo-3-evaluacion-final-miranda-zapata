@@ -11,6 +11,7 @@ import Filters from './Filters';
 function App() {
   const [movieData, setMovieData] = useState([]);
   const [filterMovie, setFilterMovie] = useState('');
+  const [filterYear, setFilterYear] = useState('all');
 
   useEffect(() => {
     getMovieApi().then((cleanData) => {
@@ -22,14 +23,41 @@ function App() {
     setFilterMovie(value);
   };
 
-  const movieFilters = movieData.filter((movie) => {
-    return movie.name.toLowerCase().includes(filterMovie.toLowerCase());
-  });
+  const handleFilterYear = (value) => {
+    setFilterYear(value);
+  };
+
+  const movieFilters = movieData
+    .filter((movie) => {
+      return movie.name.toLowerCase().includes(filterMovie.toLowerCase());
+    })
+    .filter((movie) => {
+      if (filterYear === 'all') {
+        return true;
+      } else {
+        return filterYear.includes(movie.year);
+      }
+    });
+
+  const getYears = () => {
+    const movieYears = movieData.map((movie) => movie.year);
+    /* const soleYear = movieYears.filter((year, index) => {
+      return movieYears.indexOf(year) === index;
+    }); */
+    const soleYear = new Set(movieYears);
+    const noDuplicatedYears = [...soleYear];
+    return noDuplicatedYears.sort();
+    // return soleYear;
+  };
 
   return (
     <>
       <h1>Owen Wilson's 'wow'</h1>
-      <Filters handleFilterMovie={handleFilterMovie} />
+      <Filters
+        handleFilterMovie={handleFilterMovie}
+        handleFilterYear={handleFilterYear}
+        years={getYears()}
+      />
       <MovieSceneList MovieSceneList={movieFilters} />
     </>
   );

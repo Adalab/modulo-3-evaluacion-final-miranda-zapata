@@ -4,7 +4,7 @@ function FilterMovie(props) {
   };
 
   return (
-    <fieldset>
+    <fieldset className=''>
       <label htmlFor='mname'>Movie</label>
       <input
         type='search'
