@@ -79,7 +79,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='app__container'>
+      <main className='main'>
         <Routes>
           <Route
             path='/'
@@ -103,7 +103,7 @@ function App() {
           />
           <Route path='*' element={<PageNotFound />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </>
   );
