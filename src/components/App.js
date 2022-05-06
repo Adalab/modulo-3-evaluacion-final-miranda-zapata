@@ -39,6 +39,7 @@ function App() {
   };
 
   const movieFilters = movieData
+    .sort((a, b) => a.name.localeCompare(b.name))
     .filter((movie) => {
       return movie.name.toLowerCase().includes(filterMovie.toLowerCase());
     })
