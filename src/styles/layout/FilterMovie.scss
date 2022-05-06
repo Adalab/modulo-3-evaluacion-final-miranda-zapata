@@ -1,0 +1,27 @@
+@import '/src/styles/core/Variables.scss';
+
+.movie {
+  margin: 0 25px;
+
+  &__label {
+    color: $colorSilverPink;
+    margin: 0 15px;
+  }
+
+  &__input {
+    border: 1px solid $colorSilverPink;
+    border-radius: 4px;
+    padding-left: 5px;
+    color: $colorAlabaster;
+    height: 25px;
+    width: 250px;
+
+    @media (min-width: 768px) {
+      width: 575px;
+    }
+  }
+  ::placeholder {
+    color: $colorSpanishGray;
+    font-family: $fontHighlight;
+  }
+}

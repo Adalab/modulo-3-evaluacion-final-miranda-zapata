@@ -1,0 +1,17 @@
+@import '/src/styles/core/Variables.scss';
+
+.movie {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+  }
+
+  &__listItem {
+    border: solid 2px $colorSilverPink;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 4px;
+  }
+}

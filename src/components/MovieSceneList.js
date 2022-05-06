@@ -1,4 +1,5 @@
 import MovieSceneItem from './MovieSceneItem';
+import '../styles/layout/MovieSceneList.scss';
 
 function MovieSceneList(props) {
   if (props.MovieSceneList.length === 0) {
@@ -15,7 +16,7 @@ function MovieSceneList(props) {
     });
 
     return (
-      <section>
+      <section className='movie__container'>
         <ul className='movie__list'>{movieElements}</ul>
       </section>
     );

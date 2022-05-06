@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function MovieSceneItem(props) {
   return (
     <div className='movie__card'>
-      <Link to={`/movie/${props.MovieSceneItem.id}`}>
+      <Link className='movie__link' to={`/movie/${props.MovieSceneItem.id}`}>
         <img
           className='movie__poster'
           alt={props.MovieSceneItem.name}
@@ -12,7 +12,7 @@ function MovieSceneItem(props) {
           src={props.MovieSceneItem.poster}
         />
         <h3 className='movie__title'>{props.MovieSceneItem.name}</h3>
-        <p className='movie__line'>{props.MovieSceneItem.line}</p>
+        <p className='movie__line'>"{props.MovieSceneItem.line}"</p>
         <p className='movie__year'>{props.MovieSceneItem.year}</p>
       </Link>
     </div>

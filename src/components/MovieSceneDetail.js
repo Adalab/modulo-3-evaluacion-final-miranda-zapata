@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
+import '../styles/layout/MovieSceneDetail.scss';
 
 function MovieSceneDetail(props) {
   // Condicional para que la ruta /movie/mELoInvEnTo me lleve al mensaje de error (si no, el mensaje saldría en /mELoInvEnTo directamente, no en /movie/mELoInvEnTo
@@ -7,39 +8,45 @@ function MovieSceneDetail(props) {
     return <PageNotFound />;
   } else {
     return (
-      <section className='detail__movie'>
+      <section className='detail'>
         <img
           className='detail__poster'
           alt={props.MovieSceneItem.name}
           title={props.MovieSceneItem.name}
           src={props.MovieSceneItem.poster}
         />
-        <h3 className='detail__line'>{props.MovieSceneItem.line}</h3>
-        <p className='detail__title'>From {props.MovieSceneItem.name}</p>
-        <p className='detail__director'>
-          Directed by {props.MovieSceneItem.director}
-        </p>
-        <p>
-          <a
-            className='detail__clip'
-            href={props.MovieSceneItem.audio}
-            title='Listen to this wow!'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Audio clip
-          </a>
-        </p>
 
-        <p>
-          <Link
-            to='/'
-            className='detail__returnLink'
-            title='Return to homepage'
-          >
-            Go back
-          </Link>
-        </p>
+        <div className='detail__container'>
+          <h3 className='detail__line'>{props.MovieSceneItem.line}</h3>
+          <p className='detail__title'>
+            <i className='detail__icon fas fa-tv'></i> From{' '}
+            {props.MovieSceneItem.name}
+          </p>
+          <p className='detail__director'>
+            <i className='detail__icon fas fa-video'></i> Directed by{' '}
+            {props.MovieSceneItem.director}
+          </p>
+          <p className='detail__clip'>
+            <a
+              className='detail__clip'
+              href={props.MovieSceneItem.audio}
+              title='Listen to this wow!'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='detail__icon fas fa-headphones'></i> Audio clip
+            </a>
+          </p>
+          <p className='detail__returnLink'>
+            <Link
+              to='/'
+              className='detail__returnLink'
+              title='Return to homepage'
+            >
+              <i className='detail__icon fas fa-reply'></i> Go back
+            </Link>
+          </p>
+        </div>
       </section>
     );
   }

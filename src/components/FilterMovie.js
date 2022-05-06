@@ -1,10 +1,12 @@
+import '../styles/layout/FilterMovie.scss';
+
 function FilterMovie(props) {
   const handleChangeMovie = (ev) => {
     props.handleFilterMovie(ev.target.value);
   };
 
   return (
-    <fieldset className='movie__filter'>
+    <fieldset className='movie'>
       <label className='movie__label' htmlFor='mname'>
         Movie
       </label>

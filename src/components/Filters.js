@@ -1,6 +1,8 @@
 import FilterMovie from './FilterMovie';
 import FilterYear from './FilterYear';
 
+import '../styles/layout/Filters.scss';
+
 function Filters(props) {
   return (
     <section className='filters'>

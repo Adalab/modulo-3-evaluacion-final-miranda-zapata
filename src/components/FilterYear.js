@@ -1,3 +1,5 @@
+import '../styles/layout/FilterYear.scss';
+
 function FilterYear(props) {
   const handleChangeYear = (ev) => {
     props.handleFilterYear(ev.target.value);
@@ -14,7 +16,7 @@ function FilterYear(props) {
   };
 
   return (
-    <fieldset className='year__filter'>
+    <fieldset className='year'>
       <label className='year__label' htmlFor='myear'>
         Year
       </label>
@@ -25,9 +27,7 @@ function FilterYear(props) {
         onChange={handleChangeYear}
         value={props.filterYear}
       >
-        <option className='year__option' value='all'>
-          All
-        </option>
+        <option value='all'>All</option>
         {renderYears()}
       </select>
     </fieldset>

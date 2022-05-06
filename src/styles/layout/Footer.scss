@@ -1,0 +1,25 @@
+@import '/src/styles/core/Variables.scss';
+
+.footer {
+  text-align: center;
+  margin: 20px 0;
+
+  &__credits {
+    color: $colorSpanishGray;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    color: $colorSilverPink;
+
+    &--uppercase {
+      color: $colorSilverPink;
+      text-transform: uppercase;
+    }
+  }
+
+  &__disclaimer {
+    color: $colorSpanishGray;
+    font-size: x-small;
+  }
+}
