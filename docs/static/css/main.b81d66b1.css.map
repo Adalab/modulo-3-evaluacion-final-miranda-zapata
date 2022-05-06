@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.b81d66b1.css","mappings":"AACA,eACE,SAAU","sources":["styles/MovieSceneItem.scss"],"sourcesContent":["// Estilo temporal para que la imagen no se vea tan grande\r\n.movie__poster {\r\n  width: 15%;\r\n}\r\n"],"names":[],"sourceRoot":""}
