@@ -8,7 +8,7 @@ function MovieSceneList(props) {
   } else {
     const movieElements = props.MovieSceneList.map((movieScene, index) => {
       return (
-        <li className='movie' key={index}>
+        <li className='movie__listItem' key={index}>
           <MovieSceneItem MovieSceneItem={movieScene} />
         </li>
       );
@@ -16,7 +16,7 @@ function MovieSceneList(props) {
 
     return (
       <section>
-        <ul className='movies'>{movieElements}</ul>
+        <ul className='movie__list'>{movieElements}</ul>
       </section>
     );
   }

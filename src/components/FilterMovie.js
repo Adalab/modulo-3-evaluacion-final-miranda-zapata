@@ -4,11 +4,13 @@ function FilterMovie(props) {
   };
 
   return (
-    <fieldset className=''>
-      <label htmlFor='mname'>Movie</label>
+    <fieldset className='movie__filter'>
+      <label className='movie__label' htmlFor='mname'>
+        Movie
+      </label>
       <input
         type='search'
-        className='input__search'
+        className='movie__input'
         name='mname'
         id='mname'
         placeholder='Search by movie name'

@@ -7,31 +7,36 @@ function MovieSceneDetail(props) {
     return <PageNotFound />;
   } else {
     return (
-      <section className='movie__detail'>
+      <section className='detail__movie'>
         <img
-          className='movie__poster'
+          className='detail__poster'
           alt={props.MovieSceneItem.name}
           title={props.MovieSceneItem.name}
           src={props.MovieSceneItem.poster}
         />
-        <h3 className='movie__line'>{props.MovieSceneItem.line}</h3>
-        <p className='movie__title'>From {props.MovieSceneItem.name}</p>
-        <p className='movie__director'>
+        <h3 className='detail__line'>{props.MovieSceneItem.line}</h3>
+        <p className='detail__title'>From {props.MovieSceneItem.name}</p>
+        <p className='detail__director'>
           Directed by {props.MovieSceneItem.director}
         </p>
         <p>
           <a
-            className='movie__clip'
+            className='detail__clip'
             href={props.MovieSceneItem.audio}
             title='Listen to this wow!'
             target='_blank'
+            rel='noopener noreferrer'
           >
             Audio clip
           </a>
         </p>
 
         <p>
-          <Link to='/' className='movie__returnBtn' title='Return to homepage'>
+          <Link
+            to='/'
+            className='detail__returnLink'
+            title='Return to homepage'
+          >
             Go back
           </Link>
         </p>

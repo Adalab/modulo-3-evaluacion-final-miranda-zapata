@@ -1,4 +1,5 @@
 import '../styles/App.scss';
+import '../styles/core/Reset.scss';
 import React from 'react';
 
 import { useState, useEffect } from 'react';
@@ -9,6 +10,8 @@ import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
 import MovieSceneDetail from './MovieSceneDetail';
 import PageNotFound from './PageNotFound';
+import Header from './Header';
+import Footer from './Footer';
 
 import getMovieApi from '../services/movieApi';
 import LocalStorage from '../services/localStorage';
@@ -75,8 +78,8 @@ function App() {
 
   return (
     <>
-      <h1>Owen Wilson's 'wow'</h1>
-      <div className=''>
+      <Header />
+      <div className='app__container'>
         <Routes>
           <Route
             path='/'
@@ -101,6 +104,7 @@ function App() {
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
