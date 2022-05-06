@@ -14,8 +14,9 @@ const callToApi = () => {
           year: movie.year,
           director: movie.director,
           audio: movie.audio,
-          // Reemplazamos (TODOS) los espacios por guiones y con el current wow in movie obtenemos un ID SUPER UNICO
+          // Reemplazamos (todos) los espacios por guiones (con replaceAll) y con el current_wow_in_movie obtenemos un id realmente único para cada película
           id: movie.movie.replaceAll(' ', '_') + movie.current_wow_in_movie,
+          // Con id: index y (movie, index) en el map tendríamos que convertir en número entero el string de la ruta de la película (en App.js línea 73) con la función parseInt(id), que convierte un string en integer.
         };
       });
 
