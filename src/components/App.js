@@ -8,6 +8,7 @@ import { useLocation, matchPath } from 'react-router';
 import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
 import MovieSceneDetail from './MovieSceneDetail';
+import PageNotFound from './PageNotFound';
 
 import getMovieApi from '../services/movieApi';
 import LocalStorage from '../services/localStorage';
@@ -98,6 +99,7 @@ function App() {
             path='/movie/:id'
             element={<MovieSceneDetail MovieSceneItem={foundMovie} />}
           />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </div>
     </>
