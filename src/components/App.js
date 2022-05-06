@@ -15,12 +15,8 @@ import LocalStorage from '../services/localStorage';
 
 function App() {
   const [movieData, setMovieData] = useState(LocalStorage.get('movies', []));
-  const [filterMovie, setFilterMovie] = useState(
-    LocalStorage.get('filterMovie', '')
-  );
-  const [filterYear, setFilterYear] = useState(
-    LocalStorage.get('filterYear', 'all')
-  );
+  const [filterMovie, setFilterMovie] = useState('');
+  const [filterYear, setFilterYear] = useState('all');
 
   useEffect(() => {
     if (movieData.length === 0) {
@@ -32,9 +28,7 @@ function App() {
 
   useEffect(() => {
     LocalStorage.set('movies', movieData);
-    LocalStorage.set('filterMovie', filterMovie);
-    LocalStorage.set('filterYear', filterYear);
-  }, [movieData, filterMovie, filterYear]);
+  }, [movieData]);
 
   const handleFilterMovie = (value) => {
     setFilterMovie(value);

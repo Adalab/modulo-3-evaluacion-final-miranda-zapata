@@ -14,7 +14,8 @@ const callToApi = () => {
           year: movie.year,
           director: movie.director,
           audio: movie.audio,
-          id: movie.movie,
+          // Reemplazamos (TODOS) los espacios por guiones y con el current wow in movie obtenemos un ID SUPER UNICO
+          id: movie.movie.replaceAll(' ', '_') + movie.current_wow_in_movie,
         };
       });
 
