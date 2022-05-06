@@ -2,7 +2,7 @@ import '../styles/App.scss';
 import React from 'react';
 
 import { useState, useEffect } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useLocation, matchPath } from 'react-router';
 
 import MovieSceneList from './MovieSceneList';
@@ -72,7 +72,6 @@ function App() {
 
   const movieId = pathData !== null ? pathData.params.id : null;
   const foundMovie = movieData.find((item) => item.id === movieId);
-  // const foundMovie = movieData.find((item) => item.id === parseInt(movieId)); Así sería si nuestra id fuera index (movieApi.js línea 19)
 
   return (
     <>
