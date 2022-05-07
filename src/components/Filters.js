@@ -1,5 +1,6 @@
 import FilterMovie from './FilterMovie';
 import FilterYear from './FilterYear';
+import ResetButton from './ResetButton';
 
 import '../styles/layout/Filters.scss';
 
@@ -16,6 +17,7 @@ function Filters(props) {
           handleFilterYear={props.handleFilterYear}
           filterYear={props.filterYear}
         />
+        <ResetButton resetInputs={props.resetInputs} />
       </form>
     </section>
   );

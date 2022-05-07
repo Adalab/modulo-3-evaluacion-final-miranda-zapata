@@ -59,6 +59,11 @@ function App() {
     ev.preventDefault();
   };
 
+  const resetInputs = () => {
+    setFilterMovie('');
+    setFilterYear('all');
+  };
+
   const getYears = () => {
     const movieYears = movieData.map((movie) => movie.year);
     /* const soleYear = movieYears.filter((year, index) => {
@@ -92,6 +97,7 @@ function App() {
                   filterMovie={filterMovie}
                   filterYear={filterYear}
                   preventSubmitName={preventSubmitName}
+                  resetInputs={resetInputs}
                 />
                 <MovieSceneList MovieSceneList={movieFilters} />
               </>
