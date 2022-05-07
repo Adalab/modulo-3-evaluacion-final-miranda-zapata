@@ -6,20 +6,27 @@
 
   &__credits {
     color: $colorNaplesYellow;
-    margin-bottom: 8px;
+    margin: 8px 0;
   }
 
   &__link {
     color: $colorBlanchedAlmond;
 
     &--uppercase {
-      color: $colorNaplesYellow;
+      color: $colorBlanchedAlmond;
       text-transform: uppercase;
     }
   }
 
+  &__menuIcon {
+    color: $colorBlanchedAlmond;
+    padding: 2px;
+  }
+
   &__disclaimer {
+    justify-self: center;
     color: $colorNaplesYellow;
+    margin: 8px 0;
     font-size: x-small;
   }
 }
