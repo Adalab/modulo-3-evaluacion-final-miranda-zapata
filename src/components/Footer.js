@@ -16,7 +16,7 @@ function Footer() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <i class='footer__menuIcon fab fa-github'></i>
+            <i className='footer__menuIcon fab fa-github'></i>
           </a>{' '}
           <a
             className='footer__menuLink'
@@ -24,7 +24,7 @@ function Footer() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <i class='footer__menuIcon fab fa-linkedin-in'></i>
+            <i className='footer__menuIcon fab fa-linkedin-in'></i>
           </a>
         </p>
 
