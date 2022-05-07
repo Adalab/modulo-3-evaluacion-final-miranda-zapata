@@ -1,20 +1,30 @@
 @import '/src/styles/core/Variables.scss';
 
 .year {
-  margin: 0 25px;
+  padding: 5px 25px;
 
   &__label {
-    color: $colorSilverPink;
-    margin: 0 15px;
+    color: $colorNaplesYellow;
+    margin-right: 15px;
+
+    @media (min-width: 1200px) {
+      font-size: larger;
+    }
   }
 
   &__select {
-    border: 1px solid $colorSilverPink;
+    border: 1px solid $colorNaplesYellow;
     border-radius: 4px;
     height: 25px;
-    width: 250px;
+    width: 275px;
     padding-left: 5px;
-    color: $colorSpanishGray;
+    color: $colorRoyalOrange;
     font-family: $fontHighlight;
+
+    @media (min-width: 1200px) {
+      height: 35px;
+      width: 575px;
+      font-size: larger;
+    }
   }
 }

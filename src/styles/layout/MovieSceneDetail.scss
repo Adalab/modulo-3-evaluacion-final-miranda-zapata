@@ -2,29 +2,48 @@
 
 .detail {
   display: flex;
-  flex-direction: row;
-  background-color: $colorSpanishGray;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 85vw;
+  margin: 4% auto;
+  background-color: $colorNaplesYellow;
   border-radius: 8px;
-  margin: 10px;
   padding: 5px;
 
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+  }
+
   &__poster {
-    width: 375px;
+    width: 50%;
+    height: 50%;
     border-radius: 8px;
+
+    @media all and (min-width: 768px) {
+      width: 30%;
+      height: 30%;
+    }
   }
 
   &__container {
-    background-color: $colorSpanishGray;
+    background-color: $colorNaplesYellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $colorAlabaster;
-    padding-left: 75px;
+    color: $colorBlanchedAlmond;
+    width: 75vw;
+
+    @media all and (min-width: 768px) {
+      padding-left: 5%;
+      width: 50vw;
+    }
   }
 
   &__line {
-    background-color: $colorSpanishGray;
-    color: $colorYankeesBlue;
+    background-color: $colorNaplesYellow;
+    color: $colorOrangeSoda;
     font-size: x-large;
     font-style: italic;
     margin: 25px 0 75px 0;
@@ -32,25 +51,26 @@
 
   &__title {
     .detail__icon {
-      background-color: $colorSpanishGray;
-      color: $colorIndependence;
+      background-color: $colorNaplesYellow;
+      color: $colorAteneoBlue;
     }
 
-    background-color: $colorSpanishGray;
-    color: $colorIndependence;
+    background-color: $colorNaplesYellow;
+    color: $colorAteneoBlue;
     font-size: x-large;
     font-family: $fontHighlight;
+    font-weight: bold;
     margin: 25px 0 50px 0;
   }
 
   &__director {
     .detail__icon {
-      background-color: $colorSpanishGray;
-      color: $colorIndependence;
+      background-color: $colorNaplesYellow;
+      color: $colorAteneoBlue;
     }
 
-    background-color: $colorSpanishGray;
-    color: $colorIndependence;
+    background-color: $colorNaplesYellow;
+    color: $colorAteneoBlue;
     font-size: larger;
     font-family: $fontHighlight;
     margin: 25px 0 50px 0;
@@ -58,24 +78,29 @@
 
   &__clip {
     .detail__icon {
-      background-color: $colorSpanishGray;
-      color: $colorIndependence;
+      background-color: $colorOrangeSoda;
+      color: $colorAteneoBlue;
     }
 
-    background-color: $colorSpanishGray;
-    color: $colorIndependence;
+    background-color: $colorOrangeSoda;
+    color: $colorAteneoBlue;
+    text-align: center;
+    border-radius: 25px;
+    width: 15ch;
+    padding: 2%;
     font-weight: bold;
     margin: 10px 0;
   }
 
   &__returnLink {
     .detail__icon {
-      background-color: $colorSpanishGray;
-      color: $colorIndependence;
+      background-color: $colorNaplesYellow;
+      color: $colorDeepPink;
     }
 
-    background-color: $colorSpanishGray;
-    color: $colorIndependence;
+    background-color: $colorNaplesYellow;
+    color: $colorDeepPink;
+    text-align: end;
     margin: 10px 0;
   }
 }
