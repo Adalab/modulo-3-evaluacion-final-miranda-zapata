@@ -17,7 +17,7 @@ function Header() {
           Wilson
         </p>
         <p className='header__credits--more'>
-          Find more about Owen Wilson at{' '}
+          Find out more about Owen Wilson at{' '}
           <a
             className='header__link'
             href='https://www.imdb.com/name/nm0005562/'
