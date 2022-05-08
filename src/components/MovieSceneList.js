@@ -1,5 +1,5 @@
-import MovieSceneItem from './MovieSceneItem';
 import '../styles/layout/MovieSceneList.scss';
+import MovieSceneItem from './MovieSceneItem';
 
 function MovieSceneList(props) {
   if (props.MovieSceneList.length === 0) {

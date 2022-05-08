@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import '../styles/PageNotFound.scss';
 import owenNotFound from '../images/owen-notFound.png';
+import { Link } from 'react-router-dom';
 
 function PageNotFound() {
   return (

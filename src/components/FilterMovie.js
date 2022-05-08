@@ -2,6 +2,7 @@ import '../styles/layout/FilterMovie.scss';
 
 function FilterMovie(props) {
   const handleChangeMovie = (ev) => {
+    // Para prevenir la recarga ev.preventDefault(); Finalmente usado en App.js con una función preventSubmitName, línea 58
     props.handleFilterMovie(ev.target.value);
   };
 
@@ -22,5 +23,10 @@ function FilterMovie(props) {
     </fieldset>
   );
 }
+
+// Estas son las default props
+/* FilterMovie.defaultProps = {
+  inputType: 'text',
+}; */
 
 export default FilterMovie;

@@ -1,8 +1,7 @@
+import '../styles/layout/Filters.scss';
 import FilterMovie from './FilterMovie';
 import FilterYear from './FilterYear';
 import ResetButton from './ResetButton';
-
-import '../styles/layout/Filters.scss';
 
 function Filters(props) {
   return (

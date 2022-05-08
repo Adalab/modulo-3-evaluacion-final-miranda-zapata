@@ -1,6 +1,6 @@
+import '../styles/layout/MovieSceneDetail.scss';
 import { Link } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
-import '../styles/layout/MovieSceneDetail.scss';
 
 function MovieSceneDetail(props) {
   // Condicional para que la ruta /movie/mELoInvEnTo me lleve al mensaje de error (si no, el mensaje saldría en /mELoInvEnTo directamente, no en /movie/mELoInvEnTo
@@ -43,7 +43,8 @@ function MovieSceneDetail(props) {
               className='detail__returnLink'
               title='Return to homepage'
             >
-              <i className='detail__icon fas fa-reply'></i> Go back
+              <i className='detail__icon fas fa-reply'></i>{' '}
+              <em className='detail__returnLink'>Wow</em> back
             </Link>
           </p>
         </div>

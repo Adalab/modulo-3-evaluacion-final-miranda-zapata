@@ -68,16 +68,15 @@ function App() {
     const movieYears = movieData.map((movie) => movie.year);
     /* const soleYear = movieYears.filter((year, index) => {
       return movieYears.indexOf(year) === index;
-    }); */
+    });*/
     const soleYear = new Set(movieYears);
     const noDuplicatedYears = [...soleYear];
     return noDuplicatedYears.sort();
-    // return soleYear;
+    /* return soleYear.sort(); */
   };
 
   const { pathname } = useLocation();
   const pathData = matchPath('/movie/:id', pathname);
-
   const movieId = pathData !== null ? pathData.params.id : null;
   const foundMovie = movieData.find((item) => item.id === movieId);
 
