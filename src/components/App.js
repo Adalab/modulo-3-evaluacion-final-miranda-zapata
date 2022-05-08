@@ -98,7 +98,10 @@ function App() {
                   preventSubmitName={preventSubmitName}
                   resetInputs={resetInputs}
                 />
-                <MovieSceneList MovieSceneList={movieFilters} />
+                <MovieSceneList
+                  MovieSceneList={movieFilters}
+                  filterMovie={filterMovie}
+                />
               </>
             }
           />

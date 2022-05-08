@@ -5,7 +5,7 @@ function MovieSceneList(props) {
   if (props.MovieSceneList.length === 0) {
     return (
       <p className='movie__notFound'>
-        There are no movies with those search terms! Please, try again
+        Search term {props.filterMovie} brings no results! Please, try again
       </p>
     );
   } else {
