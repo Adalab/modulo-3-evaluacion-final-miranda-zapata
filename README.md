@@ -29,6 +29,10 @@ actor Owen Wilson ha dicho 'wow', [API Wow de Owen Wilson](https://owen-wilson-w
 
 Vamos a usar React para realizarlo.
 
+<p align="center">
+<img src="https://github.com/Adalab/modulo-3-evaluacion-final-miranda-zapata/blob/main/src/images/wowen-wilson-readme.png" />
+</p>
+
 ## 1. Listado de escenas
 
 En primer lugar, vamos a realizar una web con el listado de 50 escenas donde el actor Owen Wilson ha
