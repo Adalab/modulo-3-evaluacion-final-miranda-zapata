@@ -16,7 +16,6 @@ const callToApi = () => {
           audio: movie.audio,
           // Reemplazamos (todos) los espacios por guiones (con replaceAll) y con el current_wow_in_movie obtenemos un id realmente único para cada película
           id: movie.movie.replaceAll(' ', '_') + movie.current_wow_in_movie,
-          // EJERCICIO: CLIP DE VIDEO
           video: movie.video['720p'],
         };
       });
