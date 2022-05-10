@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.be0ece60.css",
-    "main.js": "./static/js/main.b929c7d3.js",
+    "main.css": "./static/css/main.d5076ef2.css",
+    "main.js": "./static/js/main.dc46f213.js",
     "static/media/owen-notFound.png": "./static/media/owen-notFound.f908d81e9cb66e88fe9c.png",
     "static/media/wowen-wilson.png": "./static/media/wowen-wilson.f90b2f7f5c89f11e93d0.png",
     "index.html": "./index.html",
-    "main.be0ece60.css.map": "./static/css/main.be0ece60.css.map",
-    "main.b929c7d3.js.map": "./static/js/main.b929c7d3.js.map"
+    "main.d5076ef2.css.map": "./static/css/main.d5076ef2.css.map",
+    "main.dc46f213.js.map": "./static/js/main.dc46f213.js.map"
   },
   "entrypoints": [
-    "static/css/main.be0ece60.css",
-    "static/js/main.b929c7d3.js"
+    "static/css/main.d5076ef2.css",
+    "static/js/main.dc46f213.js"
   ]
 }
