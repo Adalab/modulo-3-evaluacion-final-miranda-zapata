@@ -92,6 +92,24 @@
     margin: 10px 0;
   }
 
+  // EJERCICIO: CLIP DE VIDEO
+  &__video {
+    .detail__icon {
+      background-color: $colorAteneoBlue;
+      color: $colorOrangeSoda;
+    }
+
+    background-color: $colorAteneoBlue;
+    color: $colorOrangeSoda;
+    text-align: center;
+    border-radius: 25px;
+    width: 18ch;
+    padding: 2%;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  // EJERCICIO: CLIP DE VIDEO
+
   &__returnLink {
     .detail__icon {
       background-color: $colorNaplesYellow;

@@ -37,6 +37,21 @@ function MovieSceneDetail(props) {
               <i className='detail__icon fas fa-headphones'></i> Audio clip
             </a>
           </p>
+
+          {/* EJERCICIO: AÑADIR UN ENLACE A LA ESCENA EN VÍDEO */}
+          <p className='detail__video'>
+            <a
+              className='detail__video'
+              href={props.MovieSceneItem.video}
+              title='Watch the movie clip!'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <i className='detail__icon far fa-eye'></i> Watch video
+            </a>
+          </p>
+          {/* EJERCICIO: CLIP DE VIDEO */}
+
           <p className='detail__returnLink'>
             <Link
               to='/'
